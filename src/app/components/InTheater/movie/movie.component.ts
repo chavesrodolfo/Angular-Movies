@@ -63,7 +63,7 @@ export class MovieComponent implements OnInit {
       this._moviesService.getMovieVideos(id).subscribe( res => {
         if (res.results && res.results.length) {
           this.video = res.results[0];
-          this.video['url'] = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + this.video['key']);
+          this.video['url'] = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + this.video['key'] + '?autoplay=1&fs=1&iv_load_policy=3&rel=0&showinfo=0&showsearch=0&controls=1');
         }
       });
 
@@ -77,7 +77,7 @@ export class MovieComponent implements OnInit {
 
   openDialog(): void {
     this.dialog.open(AppMovieDialogComponent, {
-      height: '500px',
+      height: '55%',
       width: '800px',
       data: { video: this.video}
     });

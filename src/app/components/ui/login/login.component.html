@@ -2,25 +2,25 @@
   <div *ngIf="!(auth.user | async); else alreadyLoggedIn">
     <div class="Card-Aligner">
       <mat-card class="card-items">
-        <h1>Login to Your Account</h1>
+        <h1>Login</h1>
         <form [formGroup]="userForm" (ngSubmit)="login()">
 
           <mat-input-container class="input-full">
-            <input matInput #email type="email" placeholder="Email address" formControlName="email" required>
+            <input matInput #email type="email" placeholder="Email" formControlName="email" required>
             <mat-error *ngIf="formErrors.email">{{ formErrors.email }}</mat-error>
           </mat-input-container>
           <mat-input-container class="input-full">
-            <input matInput #password type="password" placeholder="Password" formControlName="password" required>
+            <input matInput #password type="password" placeholder="Senha" formControlName="password" required>
             <mat-error *ngIf="formErrors.password">{{ formErrors.password }}</mat-error>
           </mat-input-container>
 
-          <button type="submit" mat-raised-button color="accent" [disabled]="!userForm.valid">Sign In</button>
+          <button type="submit" mat-raised-button color="accent" [disabled]="!userForm.valid">Entrar</button>
 
         </form>
         <br>
-        <button mat-raised-button color="primary" (click)="loginWithGoogle()">Sign With Google</button>
+        <button mat-raised-button color="primary" (click)="loginWithGoogle()">Login com Google</button>
         <mat-card-actions>
-          No Account? - <a routerLink="/register">Register Here Now</a>
+          Nao possui uma conta? - <a routerLink="/register">Registre-se</a>
         </mat-card-actions>
       </mat-card>
     </div>
@@ -31,7 +31,7 @@
 
   <ng-template #alreadyLoggedIn>
     <p class="text-success">
-      Already logged in!
+      Você está logado na sua conta!
     </p>
   </ng-template>
 

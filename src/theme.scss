@@ -58,3 +58,5 @@ $app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
 .mat-icon {
   color: white;
 }
+
+.mat-dialog-container { overflow: hidden !important; background: black;}

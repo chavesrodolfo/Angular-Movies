@@ -13,11 +13,11 @@
               <button mat-mini-fab matTooltip="Em breve"><mat-icon>favorite</mat-icon></button>
               <button mat-mini-fab matTooltip="Em breve"><mat-icon>star</mat-icon></button>
               <button mat-mini-fab matTooltip="Em breve"><mat-icon>bookmark</mat-icon></button>
-              <h4><a href="javascript:void(0)" (click)="openDialog()" *ngIf="video"><mat-icon>play_arrow</mat-icon> Trailer</a></h4>
+              <button mat-mini-fab matTooltip="Trailer" (click)="openDialog()" *ngIf="video"><mat-icon>play_arrow</mat-icon></button>
             </div>
             <h3 class="parallax-subtitle">Sinopse</h3>
             <p>{{movie.overview}}</p>
-            <h3 class="parallax-subtitle">Categorias</h3>
+            <h3 class="parallax-subtitle">Gênero</h3>
             <a *ngFor="let genre of movie.genres" routerLink="/genres/{{genre.id}}/{{genre.name}}" class="genders-cat">
               <button mat-raised-button color="primary">{{genre.name}}</button>
             </a>

@@ -22,14 +22,14 @@ export class LoginComponent implements OnInit {
   };
   validationMessages = {
     'email': {
-      'required': 'Email is required.',
-      'email': 'Email must be a valid email',
+      'required': 'Email obrigatório.',
+      'email': 'Insira um email válido.',
     },
     'password': {
-      'required': 'Password is required.',
-      'pattern': 'Password must be include at one letter and one number.',
-      'minlength': 'Password must be at least 4 characters long.',
-      'maxlength': 'Password cannot be more than 40 characters long.',
+      'required': 'Senha obrigatória.',
+      'pattern': 'A senha deve possuir letras e números.',
+      'minlength': 'A senha deve ter no mínimo 4 caracteres.',
+      'maxlength': 'A senha não pode ser maior que 40 caracteres.',
     },
   };
 

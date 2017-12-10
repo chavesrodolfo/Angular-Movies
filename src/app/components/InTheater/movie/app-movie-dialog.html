@@ -1,7 +1,7 @@
 <div>
-  <a style="color: white; float: right; cursor:pointer"><mat-icon (click)="closeDialog()">close</mat-icon></a>
+  <a style="color: white; float: right; cursor:pointer;"><mat-icon (click)="closeDialog()">close</mat-icon></a>
   <h5 style="margin: 5px">{{data.video.name}}</h5>
 </div>
-<div *ngIf="data.video" class="video-movie-main">
-  <iframe [src]="data.video.url" allowfullscreen width="99.4%" height="459px"></iframe>
+<div *ngIf="data.video">
+  <iframe [src]="data.video.url" style="height:48vh; width:100%;" frameborder="0" allowfullscreen></iframe>
 </div>

@@ -25,7 +25,7 @@
 .parallax-btn-container {  margin-bottom: 20px  }
 
 .parallax-btn-container button {
-  background: rgba(0, 0, 0, 0.5); border: 2px solid white; margin-right: 10px
+  background: rgba(0, 0, 0, 0.5); border: 2px solid white; margin: 5px
 }
 
 .parallax-btn-container button mat-icon {
@@ -78,44 +78,31 @@
   margin: 1px;
 }
 
-.video-movie-main{
-  margin: auto;
-}
-
-.video-movie-main iframe{
-  width: 100%;
-  height: 300px;
-}
-
 /* =============
     Responsive
  =============== */
 
 /* Large desktops and laptops */
 @media (min-width: 1201px) {
-  .video-movie-main{  width: 50%;  }
   .recommended-poster::ng-deep .movie-card{  width: 17% !important;  }
   .recommended-poster::ng-deep .movie-card .mat-card-title{  font-size: 20px !important  }
 }
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1200px) {
-  .video-movie-main{  width: 60%;  }
   .recommended-poster::ng-deep .movie-card{  width: 23%;  }
 }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 992px) {
   .genders-cat button{  margin-bottom: 5px;  }
-  .video-movie-main{  width: 70%;  }
   .recommended-poster::ng-deep .movie-card{  width: 37%;  }
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 768px) {
-  .parallax-subtitle, p{ display: none}
+  .parallax-img-container { display: none}
   .genders-cat button{  margin-bottom: 5px;  }
-  .video-movie-main{  width: 80%;  }
   .recommended-poster::ng-deep .movie-card{  width: 31%;  }
   .recommended-poster::ng-deep .movie-card .mat-card-title{  font-size: 17px  }
   .parallax-right-content h2 {  font-size: 1.5em; font-weight: 700;  }
@@ -124,9 +111,7 @@
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
   .genders-cat button{  margin-bottom: 5px;  }
-  .video-movie-main{  width: 90%;  }
-  .parallax-img-container img {width: 150px; height: 250px}
-  .parallax-subtitle, p{ display: none}
+  .parallax-img-container { display: none}
   .similar-movies { display: none}
   .recommended-poster::ng-deep .movie-card{  width: 88%;  }
   .parallax-right-content h2 {  font-size: 1.5em; font-weight: 700;  }

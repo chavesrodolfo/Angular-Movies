@@ -1,7 +1,7 @@
 <div class="padding-top-60">
   <div class="Card-Aligner">
     <mat-card class="card-items">
-      <h1>Register</h1>
+      <h1>Nova conta</h1>
       <form [formGroup]="userForm" (ngSubmit)="signup()">
         <!--<mat-input-container class="input-full">-->
         <!--<input matInput #name id="name" placeholder="Name" required>-->
@@ -11,13 +11,13 @@
           <mat-error *ngIf="formErrors.email">{{ formErrors.email }}</mat-error>
         </mat-input-container>
         <mat-input-container class="input-full">
-          <input matInput type="password" id="inputPassword" placeholder="Password" formControlName="password" required>
+          <input matInput type="password" id="inputPassword" placeholder="Senha" formControlName="password" required>
           <mat-error *ngIf="formErrors.password">{{ formErrors.password }}</mat-error>
         </mat-input-container>
-        <button type="submit" mat-raised-button  color="primary" [disabled]="!userForm.valid">Submit</button>
+        <button type="submit" mat-raised-button  color="primary" [disabled]="!userForm.valid">Cadastrar</button>
       </form>
       <mat-card-actions>
-        <a routerLink="/login">I Already Have an Account</a>
+        <a routerLink="/login">Eu já tenho uma conta</a>
       </mat-card-actions>
     </mat-card>
   </div>
