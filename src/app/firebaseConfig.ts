@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-  apiKey: 'AIzaSyCAei1Ie5Rb-XNdavuRPAJ-GwZVO3Dfia8',
-  authDomain: 'angular-movies-c91ba.firebaseapp.com',
-  databaseURL: 'https://angular-movies-c91ba.firebaseio.com',
-  projectId: 'angular-movies-c91ba',
-  storageBucket: 'angular-movies-c91ba.appspot.com',
-  messagingSenderId: '964673381237'
+  apiKey: "AIzaSyD3b0mZ258RsmDrbl0bykBjXXebjSh8hzI",
+  authDomain: "chavesrodolfo.firebaseapp.com",
+  databaseURL: "https://chavesrodolfo.firebaseio.com",
+  projectId: "chavesrodolfo",
+  storageBucket: "",
+  messagingSenderId: "1062541764189"
 };

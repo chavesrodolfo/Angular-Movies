@@ -23,4 +23,5 @@ export class MovieModel {
   public video: boolean;
   public vote_average: number;
   public vote_count: number;
+  public isMovie:boolean;
 }

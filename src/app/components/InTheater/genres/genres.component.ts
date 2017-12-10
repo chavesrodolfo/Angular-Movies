@@ -29,4 +29,9 @@ export class GenresComponent implements OnInit {
     });
   }
 
+  getMovie(movie: MovieModel) {
+    movie.isMovie = true;
+    return movie;
+  }
+
 }

@@ -30,7 +30,7 @@ mat-nav-list a{
 }
 
 .home-name-padding {
-  padding-left: 70px;
+  padding-left: -70px;
 }
 
 .hidden {

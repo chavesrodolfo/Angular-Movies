@@ -12,7 +12,7 @@ export class AllMoviesComponent implements OnInit {
 
   nowPlaying: Array<PaginatorModel> = [];
   genres: GenresListModel;
-  max = 10;
+  max = 50;
   min = 0;
   step = 1;
   value = 0;

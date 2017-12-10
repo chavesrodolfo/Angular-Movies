@@ -48,6 +48,6 @@
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
   .list-movies { width: 90% }
-  .all-poster::ng-deep .movie-card{  width: 88%;  }
+  .all-poster::ng-deep .movie-card{  width: 34%;  }
   .filter-movies-card{ width: 80%; margin-bottom: 20px; }
 }

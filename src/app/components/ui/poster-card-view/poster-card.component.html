@@ -6,10 +6,10 @@
       <mat-card-title *ngIf="model.title">{{model.title}}</mat-card-title>
       <mat-card-title *ngIf="model.name">{{model.name}}</mat-card-title>
       <p *ngIf="model.release_date">
-        <strong style="color: #F44336;">Release Date: </strong>{{model.release_date | date}}
+        <strong>Lançamento: </strong>{{model.release_date | date :  "dd/MM/y"}}
       </p>
       <p *ngIf="model.first_air_date">
-        <strong style="color: #F44336;">First Air Date: </strong>{{model.first_air_date | date}}
+        <strong>Primeira exibição: </strong>{{model.first_air_date | date :  "dd/MM/y"}}
       </p>
     </mat-card-content>
   </mat-card>

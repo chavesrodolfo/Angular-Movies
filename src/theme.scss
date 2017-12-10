@@ -11,7 +11,7 @@ $app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
 
 @include angular-material-theme($app-theme);
 
-.cast-actor-card{ background-color:  #F44336}
+.cast-actor-card{ background-color:  #424242;}
 ::-webkit-scrollbar-thumb {  background-color: #F44336;  }
 .moviesHome-header a { color: #F44336; }
 

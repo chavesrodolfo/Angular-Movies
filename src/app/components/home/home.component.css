@@ -1,5 +1,5 @@
 #home-header{
-  height: 550px;
+  height: 140px;
   background: linear-gradient(rgba(52,41,49,0.8), rgba(26, 33, 74, 0.8)), url('../../../assets/img/background-main.jpg') no-repeat bottom;
   background-size: cover;
 }
@@ -24,7 +24,7 @@
 
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
-  ::ng-deep .movie-card{  width: 19%;  }
+  ::ng-deep .movie-card{  width: 17%;  }
 }
 
 /* Landscape tablets and medium desktops */
@@ -45,6 +45,6 @@
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
-  ::ng-deep .movie-card{  width: 80%;  }
+  ::ng-deep .movie-card{  width: 34%;  }
   .janco-ocult{  display: none;  }
 }

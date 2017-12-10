@@ -3,7 +3,7 @@
   <h1>{{title}}</h1>
   <div class="center">
   <span *ngFor="let movie of movies;">
-    <app-poster-card [model]="movie"></app-poster-card>
+    <app-poster-card [model]="getMovie(movie)"></app-poster-card>
   </span>
   </div>
 

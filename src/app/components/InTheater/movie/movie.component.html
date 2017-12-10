@@ -10,14 +10,14 @@
           <div class="parallax-right-content"> <!--Title-->
             <h2>{{movie.title}}</h2>
             <div class="parallax-btn-container">
-              <button mat-mini-fab matTooltip="Soon"><mat-icon>favorite</mat-icon></button>
-              <button mat-mini-fab matTooltip="Soon"><mat-icon>star</mat-icon></button>
-              <button mat-mini-fab matTooltip="Soon"><mat-icon>bookmark</mat-icon></button>
-              <a href="javascript:void(0)" (click)="openDialog()" *ngIf="video"><mat-icon>play_arrow</mat-icon> Play Trailer</a>
+              <button mat-mini-fab matTooltip="Em breve"><mat-icon>favorite</mat-icon></button>
+              <button mat-mini-fab matTooltip="Em breve"><mat-icon>star</mat-icon></button>
+              <button mat-mini-fab matTooltip="Em breve"><mat-icon>bookmark</mat-icon></button>
+              <h4><a href="javascript:void(0)" (click)="openDialog()" *ngIf="video"><mat-icon>play_arrow</mat-icon> Trailer</a></h4>
             </div>
-            <h3 class="parallax-subtitle">Overview</h3>
+            <h3 class="parallax-subtitle">Sinopse</h3>
             <p>{{movie.overview}}</p>
-            <h3 class="parallax-subtitle">Categories</h3>
+            <h3 class="parallax-subtitle">Categorias</h3>
             <a *ngFor="let genre of movie.genres" routerLink="/genres/{{genre.id}}/{{genre.name}}" class="genders-cat">
               <button mat-raised-button color="primary">{{genre.name}}</button>
             </a>
@@ -30,11 +30,11 @@
   <div class="container">
 
     <div *ngIf="cast">
-      <h1 class="center">Top Billed Cast</h1>
+      <h1 class="center">Elenco</h1>
       <mat-card-content class="card-content">
         <mat-card class="cast-actor-card" *ngFor="let actor of cast">
           <a routerLink="/actor/{{actor?.id}}">
-            <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{actor?.profile_path}}" height="294px">
+            <img src="https://image.tmdb.org/t/p/w500/{{actor?.profile_path}}" height="294px">
             <mat-card-content>
               <strong>{{actor.name}}</strong><br>
               <span>{{actor.character}}</span>
@@ -45,7 +45,7 @@
     </div>
 
     <div *ngIf="similarMovies" class="similar-movies">
-      <h1>Recommended Movies</h1>
+      <h1>Filmes relacionados</h1>
       <div style="text-align:center;">
         <span *ngFor="let movie of similarMovies;">
           <app-poster-card [model]="movie" class="recommended-poster"></app-poster-card>
@@ -59,6 +59,5 @@
 </div>
 <div *ngIf="isLoading" style="margin-top: 30%">
   <div class="loading">
-    <h4>Loading</h4>
   </div>
 </div>
