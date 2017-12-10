@@ -25,7 +25,7 @@ $app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
   @include angular-material-theme($app-dark-theme);
 
   p strong {  color: #2196f3 !important;  }
-  .cast-actor-card{ background-color:  #2196f3}
+  .cast-actor-card{ background-color:  #424242}
   .mat-raised-button.mat-primary {  color: white;  }
   ::-webkit-scrollbar-thumb {  background-color: #2196f3;  }
   .moviesHome-header a { color: #2196f3; }
@@ -41,7 +41,7 @@ $app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
   @include angular-material-theme($app-dark-theme);
 
   p strong {  color: #4caf50 !important;  }
-  .cast-actor-card{ background-color:  #4caf50}
+  .cast-actor-card{ background-color:  #424242}
   .mat-raised-button.mat-primary {  color: white !important;  }
   ::-webkit-scrollbar-thumb {  background-color: #4caf50;  }
   .moviesHome-header a { color: #4caf50 }

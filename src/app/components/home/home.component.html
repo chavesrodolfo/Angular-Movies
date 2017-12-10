@@ -15,7 +15,7 @@
     <mat-tab-group>
 
       <!--Popular Movies Tab-->
-      <mat-tab label="Filmes polulares">
+      <mat-tab label="Polulares">
         <span *ngFor="let movie of popularList | slice:0:18">
           <app-poster-card [model]="movie"></app-poster-card>
        </span>

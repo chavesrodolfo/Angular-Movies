@@ -57,7 +57,7 @@ export class MovieComponent implements OnInit {
 
       this._moviesService.getMovieCredits(id).subscribe( res => {
         res.cast = res.cast.filter( item => { return item.profile_path });
-        this.cast = res.cast.slice(0, 8);
+        this.cast = res.cast.slice(0, 4);
       });
 
       this._moviesService.getMovieVideos(id).subscribe( res => {

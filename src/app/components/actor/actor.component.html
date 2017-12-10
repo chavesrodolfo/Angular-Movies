@@ -1,5 +1,5 @@
-<div class="padding-top-60 container" style=" display: flex;">
-  <div  style="width: 25%">
+<div class="padding-top-60 container actor-wrap-profile">
+  <div class="actor-profile-width">
     <mat-card class="actor-card">
       <img src="https://image.tmdb.org/t/p/w300/{{person.profile_path}}" *ngIf="person.profile_path">
       <mat-card-content>
@@ -15,9 +15,8 @@
     </mat-card>
   </div>
 
-  <div style="width: 70%">
-
-    <mat-card class="actor-card-bio" style="width: 100%; margin-bottom: 0;">
+  <div class="actor-bio-width">
+    <mat-card class="actor-card-bio">
       <mat-card-content>
         <div class="actor-title" dir="auto">
           <h2>{{person.name}}</h2>
@@ -36,7 +35,7 @@
       </mat-card-content>
     </mat-card>
 
-    <mat-card class="actor-card-bio" style="width: 100%; margin-bottom: 0;">
+    <mat-card class="actor-card-bio">
       <mat-card-content>
         <mat-tab-group>
           <mat-tab [label]="'Movies'">

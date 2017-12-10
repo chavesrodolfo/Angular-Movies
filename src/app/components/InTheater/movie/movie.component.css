@@ -75,7 +75,7 @@
 
 .cast-actor-card{
   vertical-align: top;
-  margin: 0px 5px 10px;
+  margin: 1px;
 }
 
 .video-movie-main{
@@ -130,4 +130,6 @@
   .similar-movies { display: none}
   .recommended-poster::ng-deep .movie-card{  width: 88%;  }
   .parallax-right-content h2 {  font-size: 1.5em; font-weight: 700;  }
+  .cast-actor-card { width: 140px; }
+  .cast-actor-card img { width: 90%; height: 90% }
 }

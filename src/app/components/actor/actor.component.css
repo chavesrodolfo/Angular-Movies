@@ -45,6 +45,18 @@
   padding: 10px;
 }
 
+.actor-wrap-profile {
+  display: flex;
+}
+
+.actor-profile-width {
+  width: 25%; 
+}
+
+.actor-bio-width { 
+  width: 100%; 
+}
+
 /* =============
     Responsive
  =============== */
@@ -66,10 +78,15 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-
+  .actor-wrap-profile { display: block; }
+  .actor-profile-width { width: 100%; }
+  .actor-card-bio { width: auto; }
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
-
+  .actor-wrap-profile { display: block; }
+  .actor-profile-width { width: 100%; }
+  .actor-bio-width { width: auto; }
+  .actor-card-bio { width: auto; }
 }
