@@ -26,7 +26,7 @@
 .parallax-btn-container {  margin-bottom: 20px  }
 
 .parallax-btn-container button {
-  background: rgba(0, 0, 0, 0.5); border: 2px solid white; margin-right: 10px
+  background: rgba(0, 0, 0, 0.5); border: 2px solid white; margin: 5px
 }
 
 .parallax-btn-container button mat-icon {
@@ -55,6 +55,10 @@
   right: 0;
   bottom: 0;
   z-index: -1;
+}
+
+.parallax-img-container img {
+  width: 250px; height: 350px; box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); border-radius: 4px;
 }
 
 .mat-card-actions{
@@ -119,15 +123,18 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 768px) {
-  .parallax-subtitle, p{ display: none}
   .genders-cat button{  margin-bottom: 5px;  }
   .video-movie-main{  width: 80%;  }
+  .parallax-img-container { display: none}
+  .parallax-right-content h2 {  font-size: 1.5em; font-weight: 700;  }
+  .parallax-right-content { padding-left: 20px; }
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
   .genders-cat button{  margin-bottom: 5px;  }
   .video-movie-main{  width: 90%;  }
-  .parallax-img-container img {width: 150px; height: 250px}
-  .parallax-subtitle, p{ display: none}
+  .parallax-img-container { display: none}
+  .parallax-right-content h2 {  font-size: 1.5em; font-weight: 700;  }
+  .parallax-right-content { padding-left: 20px; }
 }

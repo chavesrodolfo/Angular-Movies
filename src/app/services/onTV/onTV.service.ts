@@ -18,23 +18,23 @@ export class OnTVService {
   }
 
   getTvOnTheAir(page: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}tv/on_the_air?api_key=${this.apiKey}&page=${page}&language=${this.language}`)
+    return this.http.get(`${this.baseUrl}tv/on_the_air?api_key=${this.apiKey}&page=${page}&language=${this.language}&region=${this.region}`)
   }
 
   getTVAiringToday(page: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}tv/airing_today?api_key=${this.apiKey}&page=${page}&language=${this.language}`)
+    return this.http.get(`${this.baseUrl}tv/airing_today?api_key=${this.apiKey}&page=${page}&language=${this.language}&region=${this.region}`)
   }
 
   getPopularTVShow(page: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}tv/popular?api_key=${this.apiKey}&page=${page}&language=${this.language}`)
+    return this.http.get(`${this.baseUrl}tv/popular?api_key=${this.apiKey}&page=${page}&language=${this.language}&region=${this.region}`)
   }
 
   getTVShow(id: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}tv/${id}?api_key=${this.apiKey}&language=${this.language}`)
+    return this.http.get(`${this.baseUrl}tv/${id}?api_key=${this.apiKey}&language=${this.language}&region=${this.region}`)
   }
 
   getGenres(): Observable<any> {
-    return this.http.get(`${this.baseUrl}genre/tv/list?api_key=${this.apiKey}&language=${this.language}`)
+    return this.http.get(`${this.baseUrl}genre/tv/list?api_key=${this.apiKey}&language=${this.language}&region=${this.region}`)
   }
 
 }
