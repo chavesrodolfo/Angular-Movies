@@ -14,7 +14,7 @@
               <button mat-mini-fab matTooltip="Em breve"><mat-icon>star</mat-icon></button>
               <button mat-mini-fab matTooltip="Em breve"><mat-icon>bookmark</mat-icon></button>
               <button mat-mini-fab matTooltip="Trailer" (click)="openDialog()" *ngIf="video"><mat-icon>play_arrow</mat-icon></button>
-              <button mat-mini-fab matTooltip="Download" (click)="getSourceFileLink(movie.imdb_id)" class="btnDownload"><mat-icon>file_download</mat-icon></button>
+              <button mat-mini-fab matTooltip="Download" *ngIf="isLoggedIn" (click)="getSourceFileLink(movie.imdb_id)" class="btnDownload"><mat-icon>file_download</mat-icon></button>
             </div>
             <h3 class="parallax-subtitle">Sinopse</h3>
             <p>{{movie.overview}}</p>

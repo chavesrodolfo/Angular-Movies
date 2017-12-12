@@ -8,6 +8,7 @@ import {MovieVideo} from '../../../models/movie-video';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {PaginatorModel} from '../../../models/paginator.model';
 import {SeoService} from '../../../services/seo.service';
+import {AuthService} from '../../../core/auth.service';
 
 @Component({
   selector: 'app-movie',
@@ -21,6 +22,7 @@ export class MovieComponent implements OnInit {
   cast: MovieCast;
   video: MovieVideo;
   isLoading = true;
+  isLoggedIn: boolean;
 
   @ViewChild('closeModal') public  closeModal: ElementRef;
   @ViewChild('openModal') public  openModal: ElementRef;
@@ -30,8 +32,15 @@ export class MovieComponent implements OnInit {
     private router: ActivatedRoute,
     private sanitizer: DomSanitizer,
     public dialog: MatDialog,
-    private seo: SeoService
-  ) {}
+    private seo: SeoService,
+    public auth: AuthService
+  ) {
+    this.auth.afAuth.authState.subscribe(
+      a => {
+        this.isLoggedIn = a !== null;
+      }
+    );
+  }
 
   ngOnInit() {
 

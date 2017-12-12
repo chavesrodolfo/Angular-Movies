@@ -37,15 +37,12 @@
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="changeToRed()" [class.hidden]="isRedColor">
         <mat-icon style="color: #F44336">lens</mat-icon>
-        <span>Vermelho</span>
       </button>
       <button mat-menu-item (click)="changeToBlue()" [class.hidden]="isBlueColor">
         <mat-icon style="color: #2196f3">lens</mat-icon>
-        <span>Azul</span>
       </button>
       <button mat-menu-item (click)="changeToGreen()" [class.hidden]="isGreenColor">
         <mat-icon style="color: #4caf50">lens</mat-icon>
-        <span>Verde</span>
       </button>
       <button mat-menu-item (click)="auth.signOut()" *ngIf="isLoggedIn">
         <mat-icon>power_settings_new</mat-icon>
