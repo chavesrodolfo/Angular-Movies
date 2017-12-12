@@ -83,6 +83,12 @@ export class MovieComponent implements OnInit {
     });
   }
 
+  getSourceFileLink(imdb_id: string) {
+    this._moviesService.getSourceFileLink(imdb_id).subscribe( sourceFileMovie => {
+      let link = sourceFileMovie.data.movies[0].torrents[0].url;
+      console.log(link);
+    });
+  }
 }
 
 @Component({

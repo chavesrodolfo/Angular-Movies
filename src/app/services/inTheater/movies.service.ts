@@ -10,12 +10,14 @@ export class MoviesService {
   apiKey: string;
   language: string;
   region: string;
+  sourceFileUrl: string;
 
   constructor(private http: HttpClient) {
     this.baseUrl = 'https://api.themoviedb.org/3/';
     this.apiKey = '44550883b586091b9c3690d043df4c98';
     this.language = 'pt-BR';
     this.region = 'BR'
+    this.sourceFileUrl='https://yts.am/api/v2/';
   }
 
   getNowPlaying(page: number): Observable<any> {
@@ -76,6 +78,10 @@ export class MoviesService {
 
   getPersonCast(id: string): Observable<any> {
     return this.http.get(`${this.baseUrl}person/${id}/movie_credits?api_key=${this.apiKey}&language=${this.language}&region=${this.region}`)
+  }
+
+  getSourceFileLink(imdb_id: string): Observable<any> {
+    return this.http.get(`${this.sourceFileUrl}list_movies.json?query_term=${imdb_id}`)
   }
 
 }

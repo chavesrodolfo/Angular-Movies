@@ -107,6 +107,7 @@
   .recommended-poster::ng-deep .movie-card .mat-card-title{  font-size: 17px  }
   .parallax-right-content h2 {  font-size: 1.5em; font-weight: 700;  }
   .parallax-right-content { padding-left: 20px; }
+  .btnDownload { display: none};
 }
 
 /* Portrait phones and smaller */
@@ -119,4 +120,5 @@
   .cast-actor-card { width: 140px; }
   .cast-actor-card img { width: 90%; height: 90% }
   .parallax-right-content { padding-left: 20px; }
+  .btnDownload { display: none};
 }
