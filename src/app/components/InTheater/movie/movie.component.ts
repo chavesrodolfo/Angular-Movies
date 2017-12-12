@@ -85,8 +85,12 @@ export class MovieComponent implements OnInit {
 
   getSourceFileLink(imdb_id: string) {
     this._moviesService.getSourceFileLink(imdb_id).subscribe( sourceFileMovie => {
-      let link = sourceFileMovie.data.movies[0].torrents[0].url;
-      console.log(link);
+      if (sourceFileMovie.data.movies) {
+        let link = sourceFileMovie.data.movies[0].torrents[0].url;
+        window.location.href = link;
+      } else {
+        alert('Este filme ainda não está disponível para download.');
+      }
     });
   }
 }
