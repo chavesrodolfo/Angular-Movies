@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MoviesService} from '../../../services/inTheater/movies.service';
 import {PaginatorModel} from '../../../models/paginator.model';
-import {GenresListModel} from "../../../models/genres-list";
+import {GenresListModel} from '../../../models/genres-list';
 
 @Component({
   selector: 'app-all-movies',

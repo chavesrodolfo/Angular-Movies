@@ -8,7 +8,7 @@ export class SeoService {
     config = {
       title: 'Angular Movies and Series',
       description: 'My SEO friendly Angular Component',
-      image: 'https://chavesrodolfo.firebaseapp.com/images/logo.png',
+      image: 'https://dodz-filmes.firebaseapp.com/images/logo.png',
       slug: '',
       ...config
     };
@@ -17,6 +17,6 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:title', content: config.title });
     this.meta.updateTag({ property: 'og:description', content: config.description });
     this.meta.updateTag({ property: 'og:image', content: config.image });
-    this.meta.updateTag({ property: 'og:url', content: `https://chavesrodolfo.firebaseapp.com/${config.slug}` });
+    this.meta.updateTag({ property: 'og:url', content: `https://dodz-filmes.firebaseapp.com/${config.slug}` });
   }
 }

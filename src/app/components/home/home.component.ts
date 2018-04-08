@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
     this.seo.generateTags({
       title: 'Angular Movies and Series',
       description: 'Movie and Series Home Page',
-      image: 'https://chavesrodolfo.firebaseapp.com/assets/background-main.jpg'
+      image: 'https://dodz-filmes.firebaseapp.com/assets/background-main.jpg'
     });
 
     this.getNowPlayinMovies(1);

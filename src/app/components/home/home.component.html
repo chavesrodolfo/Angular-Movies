@@ -16,21 +16,21 @@
 
       <!--Popular Movies Tab-->
       <mat-tab label="Polulares">
-        <span *ngFor="let movie of popularList | slice:0:18">
+        <span *ngFor="let movie of popularList | slice:0:16">
           <app-poster-card [model]="movie"></app-poster-card>
        </span>
       </mat-tab>
 
       <!--Now Playing Movies-->
       <mat-tab label="Em cartaz">
-        <span *ngFor="let movie of nowPlaying | slice:0:18">
+        <span *ngFor="let movie of nowPlaying | slice:0:16">
           <app-poster-card [model]="movie"></app-poster-card>
         </span>
       </mat-tab>
 
       <!--Upcoming Movies Tab-->
       <mat-tab label="Breve nos cinemas">
-        <span *ngFor="let movie of upcomingList | slice:0:18">
+        <span *ngFor="let movie of upcomingList | slice:0:16">
           <app-poster-card [model]="movie"></app-poster-card>
         </span>
       </mat-tab>
@@ -50,21 +50,21 @@
 
       <!--Popular TV Shows Tab-->
       <mat-tab label="Séries populares">
-        <span *ngFor="let tvShow of popularTvShows | slice:0:18">
+        <span *ngFor="let tvShow of popularTvShows | slice:0:16">
           <app-poster-card [model]="tvShow"></app-poster-card>
        </span>
       </mat-tab>
 
       <!--Currently Airing TV Shows Tab-->
       <mat-tab label="Séries em exibição">
-        <span *ngFor="let tvShow of onTheAir | slice:0:18">
+        <span *ngFor="let tvShow of onTheAir | slice:0:16">
           <app-poster-card [model]="tvShow"></app-poster-card>
         </span>
       </mat-tab>
 
       <!--Airing Today TV Shows Tab-->
       <mat-tab label="Outras séries">
-        <span *ngFor="let tvShow of airingToday | slice:0:18">
+        <span *ngFor="let tvShow of airingToday | slice:0:16">
           <app-poster-card [model]="tvShow"></app-poster-card>
         </span>
       </mat-tab>

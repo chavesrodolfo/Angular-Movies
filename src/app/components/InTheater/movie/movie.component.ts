@@ -72,7 +72,10 @@ export class MovieComponent implements OnInit {
       this._moviesService.getMovieVideos(id).subscribe( res => {
         if (res.results && res.results.length) {
           this.video = res.results[0];
-          this.video['url'] = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + this.video['key'] + '?autoplay=1&fs=1&iv_load_policy=3&rel=0&showinfo=0&showsearch=0&controls=1');
+          let url = 'https://www.youtube.com/embed/';
+          url += this.video['key'];
+          url += '?autoplay=1&fs=1&iv_load_policy=3&rel=0&showinfo=0&showsearch=0&controls=1';
+          this.video['url'] = this.sanitizer.bypassSecurityTrustResourceUrl(url);
         }
       });
 
@@ -95,7 +98,7 @@ export class MovieComponent implements OnInit {
   getSourceFileLink(imdb_id: string) {
     this._moviesService.getSourceFileLink(imdb_id).subscribe( sourceFileMovie => {
       if (sourceFileMovie.data.movies) {
-        let link = sourceFileMovie.data.movies[0].torrents[0].url;
+        const link = sourceFileMovie.data.movies[0].torrents[sourceFileMovie.data.movies[0].torrents.length - 1].url;
         window.location.href = link;
       } else {
         alert('Este filme ainda não está disponível para download.');

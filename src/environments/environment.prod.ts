@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyD3b0mZ258RsmDrbl0bykBjXXebjSh8hzI",
-    authDomain: "chavesrodolfo.firebaseapp.com",
-    databaseURL: "https://chavesrodolfo.firebaseio.com",
-    projectId: "chavesrodolfo",
-    storageBucket: "",
-    messagingSenderId: "1062541764189"
+    apiKey: 'AIzaSyBq7A6qe-yPAfs51wswNlMPna2vO8ZrMs8',
+    authDomain: 'dodz-filmes.firebaseapp.com',
+    databaseURL: 'https://dodz-filmes.firebaseio.com',
+    projectId: 'dodz-filmes',
+    storageBucket: 'dodz-filmes.appspot.com',
+    messagingSenderId: '959726805696'
   }
 };
