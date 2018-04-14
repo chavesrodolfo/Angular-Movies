@@ -14,12 +14,16 @@ import {SeoService} from '../../services/seo.service';
 export class HomeComponent implements OnInit {
   nowPlaying: Array<PaginatorModel> = [];
   popularList: Array<PaginatorModel> = [];
+  byYearList: Array<PaginatorModel> = [];
   upcomingList: Array<PaginatorModel> = [];
   topRatedList: Array<PaginatorModel> = [];
 
   onTheAir: Array<PaginatorModel> = [];
   airingToday: Array<PaginatorModel> = [];
   popularTvShows: Array<PaginatorModel> = [];
+
+  page: number;
+  year: number;
 
   constructor(
     private moviesService: MoviesService,
@@ -47,6 +51,7 @@ export class HomeComponent implements OnInit {
 
     this.getNowPlayinMovies(1);
     this.getPopularMovies(1);
+    this.getByYear(1, 2018);
 
     //  On TV
     this.getTvOnTheAir(1);
@@ -66,6 +71,32 @@ export class HomeComponent implements OnInit {
       this.popularList = res.results;
       this.popularList.forEach(np => np['isMovie'] = true);
     });
+  }
+
+  getByYear(page: number, year: number) {
+    this.page = page;
+    this.year = year;
+    this.moviesService.getByYear(page, year).subscribe(res => {
+      this.byYearList = res.results;
+      this.byYearList.forEach(np => np['isMovie'] = true);
+    });
+  }
+
+  getMoreByYear() {
+    this.page++;
+    this.getByYear(this.page, this.year);
+  }
+
+  getMoreYears() {
+    this.page = 1;
+    this.year++;
+    this.getByYear(this.page, this.year);
+  }
+
+  getLessYears() {
+    this.page = 1;
+    this.year--;
+    this.getByYear(this.page, this.year);
   }
 
   //  On TV

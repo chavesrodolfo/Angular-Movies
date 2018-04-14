@@ -32,6 +32,10 @@ export class MoviesService {
     return this.http.get(`${this.baseUrl}movie/popular?api_key=${this.apiKey}&page=${page}&language=${this.language}&region=${this.region}`)
   }
 
+  getByYear(page: number, year: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}discover/movie?api_key=${this.apiKey}&page=${page}&language=${this.language}&region=${this.region}&primary_release_year=${year}&sort_by=vote_average.desc&certification_country=U`)
+  }
+
   getUpComingMovies(page: number): Observable<any> {
     return this.http.get(`${this.baseUrl}movie/upcoming?api_key=${this.apiKey}&page=${page}&language=${this.language}&region=${this.region}`)
   }

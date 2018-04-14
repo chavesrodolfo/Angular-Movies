@@ -14,6 +14,34 @@
 
     <mat-tab-group>
 
+      <!--By Year Movies Tab-->
+      <mat-tab label="Melhores do ano">
+        <div id="top">
+          <button mat-icon-button>
+              <mat-icon aria-label="menos" (click)="getLessYears()">fast_rewind</mat-icon>
+          </button>
+          <button mat-raised-button color="primary" class="button-by-year" (click)="getByYear(1, year)">{{year}}</button>
+          <button mat-icon-button>
+              <mat-icon aria-label="mais" (click)="getMoreYears()">fast_forward</mat-icon>
+          </button>
+        </div>
+        <div>
+            <span style="font-size: 10px; color: #777"> Página {{page}}</span>
+        </div>
+        <span *ngFor="let movie of byYearList">
+          <app-poster-card [model]="movie"></app-poster-card> 
+        </span>
+        
+        <span *ngIf="byYearList.length===0"> Sem mais para {{year}} :(</span>
+
+        <div>
+          <a href="#top">
+            <button mat-raised-button color="secundary" class="button-by-year" (click)="getMoreByYear()" *ngIf="byYearList.length>0">Ver Mais de {{year}}</button>
+          </a>
+        </div>
+
+      </mat-tab>
+
       <!--Popular Movies Tab-->
       <mat-tab label="Polulares">
         <span *ngFor="let movie of popularList | slice:0:16">
