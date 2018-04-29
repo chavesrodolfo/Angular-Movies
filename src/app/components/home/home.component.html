@@ -14,6 +14,13 @@
 
     <mat-tab-group>
 
+      <!--Popular Movies Tab-->
+      <mat-tab label="Polulares">
+        <span *ngFor="let movie of popularList | slice:0:16">
+          <app-poster-card [model]="movie"></app-poster-card>
+       </span>
+      </mat-tab>
+
       <!--By Year Movies Tab-->
       <mat-tab label="Melhores do ano">
         <div id="top">
@@ -40,13 +47,6 @@
           </a>
         </div>
 
-      </mat-tab>
-
-      <!--Popular Movies Tab-->
-      <mat-tab label="Polulares">
-        <span *ngFor="let movie of popularList | slice:0:16">
-          <app-poster-card [model]="movie"></app-poster-card>
-       </span>
       </mat-tab>
 
       <!--Now Playing Movies-->

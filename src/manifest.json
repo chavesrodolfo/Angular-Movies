@@ -1,0 +1,19 @@
+{
+    "name": "Dodz Filmes",
+    "short_name": "Dodz Filmes",
+    "theme_color": "#F44336",
+    "background_color": "#F44336",
+    "display": "standalone",
+    "orientation": "portrait",
+    "Scope": "/",
+    "start_url": "/",
+    "description":"Dodz Filmes",
+    "icons": [
+      {
+        "src": "assets/img//video.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "splash_pages": null
+  }
